@@ -8,4 +8,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --color-blue: #221b6c;
+  --color-white: #f9fffc;
 }
+
+* {
+  margin: 0; 
+  box-sizing: border-box;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+};
+
