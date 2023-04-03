@@ -3,10 +3,14 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Text from './components/Text';
 import Image from './components/Image';
+import { getFormatDate } from './utils/format-date';
+import Header from './components/Header';
 
 const NASA_URL = 'https://api.nasa.gov/planetary/apod';
 const NASA_API_KEY = 'yjawi9EPzPsmknl45Ng3yoWI8wpLpPNzKSa03kyG';
 
+//componetizar todo lo que pueda
+//los estados y setters tb puede ir como props
 //OJO VIDEOS. OCULTAR NASA_API_KEY con dotenv en .env y VER BONUS
 //las peticiones en una carpeta llamada services
 //un estado para controlar error y poder mostrar algo en pantalla en componenete <Error/> 
@@ -18,16 +22,7 @@ function App() {
     
   const handleInput = (ev) => {
     setDate(ev.target.value.toLocaleString()); 
-  };
-
-  const formatDate = () => {
-    if (date === today) {
-      return ' hoy'
-    } else {
-    const dateFragment = date.split("-");
-    return 'l día ' + dateFragment[2] + "-" + dateFragment[1] + "-" + dateFragment[0];
-  }
-  }
+  };  
 
   //PETICIÓN CON FETCH
   // useEffect(() => {
@@ -74,14 +69,13 @@ function App() {
   return (
     <div className="App">
       <section className="text">
-      <h1>Imagen astronómica del día</h1>
+        <Header/>
       <p>
         ¿Te gusta la astronomía? Aquí puedes ver las impresionantes fotografías de la NASA
         explicadas por un astrónomo.
       </p>
-      <p>Esta imagen es de{formatDate(date)}.</p>
       <label>
-        Selecciona otra fecha para ver más imágenes:
+      Esta imagen es de{date === today? ' hoy' : 'l día ' + getFormatDate(date)}. Selecciona otra fecha para ver más imágenes:
         <input type="date" id="date" value={date} max={today} onChange={handleInput} />
       </label>
       <Text data={apod} />

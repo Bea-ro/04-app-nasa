@@ -1,0 +1,45 @@
+.image-info {
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.image-info, .image-title, .image-description {
+    background-color: var(--color-light-blue); 
+    padding: 12px;
+}
+.image-date, .copyright {
+    background-color: var(--color-light-blue); 
+    padding: 0 10px;
+}
+
+.image-title {
+    color: var(--color-red);
+}
+
+.icon {
+    height:20px;
+    margin-left: 24px;
+}
+
+.image-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: small;
+    background-color: var(--color-light-blue); 
+}
+
+    .image-description {
+    line-height: 1.6rem;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color:var(--color-white);
+    color: var(--color-blue);
+    border-radius: 5px;
+    padding: 3px;
+    width: 102px;
+    margin-left: 12px
+}

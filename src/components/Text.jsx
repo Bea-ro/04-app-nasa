@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import './Text.css';
+import { getFormatDate } from '../utils/format-date'
 
 const Text = ({data}) => { 
 
@@ -15,16 +16,22 @@ const Text = ({data}) => {
   }
    
   return (
-    <div>
-    <h1>{data.title}</h1>
-    
-    <div>
-    <span>{data.date}</span>
-      <p>Autor: {data.copyright}</p>  
-      <p>{shortDescription ? data.description.slice(0,240) : data.description}</p>
-    <button type="buttom" onClick={toggleDescription}>{shortDescription ? '...Leer más' : 'Mostrar menos'}</button>
+    <div className="image-info">
+    <h2 className="image-title">{data.title}</h2>
+
    
-      </div>
+    <figure className="image-details">
+    <img src="../../public/icons/calendar.png" alt="Fecha" className="icon"/>
+    <span className="image-date">{getFormatDate(data.date)}</span>
+    <img src="../../public/icons/camera.png" alt="Autoría" className="icon"/>
+      <span className="copyright">{data.copyright}</span>  
+      </figure>
+
+      <p className="image-description">{shortDescription ? data.description.slice(0,240) : data.description}...
+    <button type="buttom" onClick={toggleDescription}>{shortDescription ? 'seguir leyendo' : 'Mostrar menos'}</button>
+    </p>
+    
+      
     </div>
   )
 }

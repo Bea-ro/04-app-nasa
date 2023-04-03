@@ -5,7 +5,7 @@ const Image = ({data}) => {
    
   return (
     <figure>
-    <img src={data.img} alt={data.title} /> 
+    <img src={data.img} alt={data.title} className="astronomic-picture"/> 
     </figure>
         )
 }
