@@ -5,7 +5,11 @@ const Image = ({data}) => {
    
   return (
     <figure>
-    <img src={data.img} alt={data.title} className="astronomic-picture"/> 
+    {data.type === 'image' ? 
+    (<img src={data.img} alt={data.title} className="astronomic-picture"/>) : 
+    (<iframe src={data.img} frameborder="0" className="astronomic-video"></iframe>)  
+    }
+  
     </figure>
         )
 }

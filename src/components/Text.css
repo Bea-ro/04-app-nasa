@@ -1,14 +1,16 @@
 .image-info {
     padding: 5px 8px;
     border-radius: 5px;
+    margin-top: 24px;
 }
 
 .image-info, .image-title, .image-description {
-    background-color: var(--color-light-blue); 
+    background-color: var(--color-blue); 
     padding: 12px;
 }
+
 .image-date, .copyright {
-    background-color: var(--color-light-blue); 
+    background-color: var(--color-blue); 
     padding: 0 10px;
 }
 
@@ -19,6 +21,7 @@
 .icon {
     height:20px;
     margin-left: 24px;
+    background-color: var(--color-blue); 
 }
 
 .image-details {
@@ -26,10 +29,10 @@
     flex-direction: row;
     align-items: center;
     font-size: small;
-    background-color: var(--color-light-blue); 
+    background-color: var(--color-blue); 
 }
 
-    .image-description {
+.image-description {
     line-height: 1.6rem;
 }
 

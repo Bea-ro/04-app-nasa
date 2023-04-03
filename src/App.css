@@ -5,19 +5,23 @@ padding: 52px;
 grid-gap: 24px
 }
 
-.text {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
 #date {
-    margin-top: 12px;
+    margin-left: 10px;
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 18px;
-    background-color:var(--color-light-blue);
+    font-size: 16px;
+    background-color:var(--color-blue);
     border-radius: 5px;
-    padding: 5px 8px;
+    padding: 3px;
 }
+
+.intro {
+line-height: 1.5rem;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    }

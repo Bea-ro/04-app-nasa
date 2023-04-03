@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 @font-face {
-  font-family: 'Nanum Gothic', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+  font-family: 'Oxygen', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');;
   font-weight: 400;
   font-style: normal;
 }
 
-
 :root {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,16 +16,17 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --color-blue: #083e94;
-  --color-light-blue: #454291;
+  --color-blue:  #083e94;
   --color-red: #fc3b1b;
   --color-white: #FFFFFF;
+  --color-light-blue: #3360a8;
 }
 
 * {
   margin: 0; 
   box-sizing: border-box;
-  background-color: var(--color-blue);
+  background-color: var(--color-light-blue);
   color: var(--color-white);
 };
+
 
