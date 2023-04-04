@@ -5,17 +5,6 @@ padding: 52px;
 grid-gap: 24px
 }
 
-#date {
-    margin-left: 10px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-    background-color:var(--color-blue);
-    border-radius: 5px;
-    padding: 3px;
-}
-
 .intro {
 line-height: 1.5rem;
 }
@@ -23,5 +12,5 @@ line-height: 1.5rem;
 .image {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     }

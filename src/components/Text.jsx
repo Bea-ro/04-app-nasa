@@ -1,9 +1,9 @@
+import './Text.css';
 import React from 'react'
 import { useState } from 'react';
-import './Text.css';
 import { getFormatDate } from '../utils/format-date'
 
-const Text = ({data}) => { 
+const Text = ( {data} ) => { 
 
   if (!Object.keys(data).length) {
     return null;
