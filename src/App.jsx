@@ -2,14 +2,19 @@ import './App.css';
 import { fetch } from './services/fetch';
 import Header from './components/Header';
 import Input from './components/Input';
+import Select from './components/Select'
 import Text from './components/Text';
 import Image from './components/Image';
 
-//OCULTAR NASA_API_KEY con dotenv en .env y VER BONUS
-//pintar el error
+
+//OCULTAR NASA_API_KEY con dotenv en .env
+//acabar en fetch endpoint toggle pero ojo cuidado que las de marte de hoy no salen
+//pintar error
+//imágenes de la semana en carrusel y hover en la del día
 
 function App() {
-  const { date, setDate, apod, error, loaded } = fetch();
+
+  const { date, setDate, endpoint, apodEndpoint, marsEndpoint, setEndpoint, apod, error, loaded } = fetch();
 
   return (
     <div className="App">
@@ -17,10 +22,11 @@ function App() {
         <Header />
         <article className="intro">
           <p>
-            ¿Te gusta la astronomía? Aquí puedes ver las impresionantes fotografías de la NASA
-            explicadas por un astrónomo.
-          </p>
+            ¿Te gusta la astronomía? Elige una fecha y podrás ver la imagen astronómica del día
+            explicada por un astrónomo o una foto de Marte.
+            </p>
           <Input date={date} setDate={setDate} />
+          <Select endpoint={endpoint} setEndpoint={setEndpoint} apodEndpoint={apodEndpoint} marsEndpoint={marsEndpoint}/>
         </article>
         <Text data={apod} />
       </section>

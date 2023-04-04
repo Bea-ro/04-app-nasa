@@ -7,9 +7,9 @@ const Image = ( {data, loaded} ) => {
     <figure>
     {
     loaded ?    
-    (data.type === 'image' ? 
-    (<img src={data.img} alt={data.title} className="astronomic-picture"/>) : 
-    (<iframe src={data.img} frameborder='0' className="astronomic-video"></iframe>))
+    (data.media_type === 'image' ? 
+    (<img src={data.url} alt={data.title} className="astronomic-picture"/>) : 
+    (<iframe src={data.url} frameborder='0' className="astronomic-video"></iframe>)) 
     : (<h2 className="loading-message">Cargando imagen...</h2>)
     }
   

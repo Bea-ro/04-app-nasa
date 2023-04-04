@@ -27,7 +27,7 @@ const Text = ( {data} ) => {
       <span className="copyright">{data.copyright}</span>  
       </figure>
 
-      <p className="image-description">{shortDescription ? data.description.slice(0,240) + '...' : data.description}
+      <p className="image-description">{shortDescription ? data.explanation.slice(0,240) + '...' : data.explanation}
     <button type="buttom" onClick={toggleDescription}>{shortDescription ? 'seguir leyendo' : 'mostrar menos'}</button>
     </p>
     
