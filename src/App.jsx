@@ -4,17 +4,18 @@ import Header from './components/Header';
 import Input from './components/Input';
 import Select from './components/Select'
 import Text from './components/Text';
+import MarsText from './components/MarsText';
 import Image from './components/Image';
-
+import MarsImage from './components/MarsImage';
 
 //OCULTAR NASA_API_KEY con dotenv en .env
-//acabar en fetch endpoint toggle pero ojo cuidado que las de marte de hoy no salen
+//ojo cuidado que las de marte de hoy no salen
 //pintar error
 //imágenes de la semana en carrusel y hover en la del día
 
 function App() {
 
-  const { date, setDate, endpoint, apodEndpoint, marsEndpoint, setEndpoint, apod, error, loaded } = fetch();
+  const { date, setDate, api, setApi, apod, error, loaded } = fetch();
 
   return (
     <div className="App">
@@ -25,14 +26,14 @@ function App() {
             ¿Te gusta la astronomía? Elige una fecha y podrás ver la imagen astronómica del día
             explicada por un astrónomo o una foto de Marte.
             </p>
-          <Input date={date} setDate={setDate} />
-          <Select endpoint={endpoint} setEndpoint={setEndpoint} apodEndpoint={apodEndpoint} marsEndpoint={marsEndpoint}/>
+          <Input date={date} setDate={setDate}/>
+          <Select date={date} setApi={setApi}/>
         </article>
-        <Text data={apod} />
+        {api==='apod'? (<Text data={apod} />) : (<MarsText data={apod}/>)}
       </section>
 
       <section className="image">
-        <Image data={apod} loaded={loaded}/>
+        {api==='apod'? (<Image data={apod} loaded={loaded}/>) : (<MarsImage data={apod} loaded={loaded}/>)}
       </section>
     </div>
   );

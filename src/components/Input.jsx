@@ -7,6 +7,7 @@ const Input = ( {date, setDate} ) => {
 
     const handleInput = (ev) => {
         setDate(ev.target.value.toLocaleString()); 
+        console.log('setea fecha a', ev.target.value.toLocaleString())
       };  
 
   return (
