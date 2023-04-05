@@ -1,13 +1,9 @@
 import './Text.css';
 import React from 'react'
 import { useState } from 'react';
-import { getFormatDate } from '../utils/format-date'
+// import { getFormatDate } from '../utils/format-date'
 
-const Text = ( {data} ) => { 
-
-  if (!Object.keys(data).length) {
-    return null;
-  }
+const Text = ( {data, error, loaded} ) => { 
  
   const [shortDescription, setShortDescription] =  useState(true)
     
@@ -16,23 +12,23 @@ const Text = ( {data} ) => {
   }
    
   return (
-    <div className="image-info">
-    <h2 className="image-title">{data.title}</h2>
-
-   
+    <section className="image-info">
+    {error? (<></>) :
+    loaded ?  
+    <><h2 className="image-title">{data.title}</h2>
     <figure className="image-details">
     <img src="../../public/icons/calendar.png" alt="Fecha" className="icon"/>
-    <span className="image-date">{getFormatDate(data.date)}</span>
+    <span className="image-date">{data.date}</span>
     <img src="../../public/icons/camera.png" alt="Autoría" className="icon"/>
-      <span className="copyright">{data.copyright}</span>  
+      <span className="copyright">{data.copyright? data.copyright : 'Copyright público'}</span>  
       </figure>
 
       <p className="image-description">{shortDescription ? data.explanation.slice(0,240) + '...' : data.explanation}
     <button type="buttom" onClick={toggleDescription}>{shortDescription ? 'seguir leyendo' : 'mostrar menos'}</button>
-    </p>
+    </p></> : <></>
     
-      
-    </div>
+  }
+    </section>
   )
 }
 

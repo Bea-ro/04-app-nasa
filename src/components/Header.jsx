@@ -7,7 +7,7 @@ const Header = () => {
         <figure className="logo-container">
 <img src="../public/logo/NASA_logo.svg" alt="Logo NASA" className="logo"/>
 </figure>
-      <h1 className="page-title">Imagen astronómica del día</h1>
+      <h1 className="page-title">¿Quieres ver la imagen astronómica del día?</h1>
     </div>
   )
 }

@@ -1,12 +1,18 @@
-.astronomic-picture {
-    width: 40vw;
-    height: 100%;
+#apod-image {
     box-shadow: 0 0 20px rgba(255, 255, 255, 1);  
+    margin-top: 52px;
+    width: 80%;
 }
 
-.astronomic-video {
-    width: 40vw;
-    height: 55vh;
+#apod-video {
+    margin: 42px 0 28px 0;
+    width: 50vw;
+    height: 45vh;
+}
+
+.loading-error-message {
+margin: 24px 0 300px 0;
+color: var(--color-red)
 }
    
   

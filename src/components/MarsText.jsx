@@ -1,21 +1,20 @@
 import React from 'react'
-import { getFormatDate } from '../utils/format-date'
+// import { getFormatDate } from '../utils/format-date'
 
-const MarsText = ( {data} ) => { 
+const MarsText = ( {data, loaded, error} ) => { 
 
-  if (!Object.keys(data).length) {
-    return null;
-  }
- 
   return (
-    <div className="image-info">
-    <figure className="image-details">
-    <img src="../../public/icons/calendar.png" alt="Fecha" className="icon"/>
-    <span className="image-date">{getFormatDate(data.earth_date)}</span>
+    <section className="image-info">
+  {error? (<h2>{error}</h2>) :
+    
+    loaded ?    
+    (<><img src="../../public/icons/calendar.png" alt="Fecha" className="icon"/>
+    <span className="image-date">{data?.earth_date}</span>
     <img src="../../public/icons/camera.png" alt="Autoría" className="icon"/>
-      <span className="copyright">Cámara: {data.camera?.name}</span>  
-      </figure>   
-    </div>
+    <span className="copyright">Cámara: {data.camera?.name}</span></>) :
+    (<h2>Cargando info...</h2>)
+  }
+    </section>
   )
 }
 
