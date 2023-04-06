@@ -1,10 +1,10 @@
-.api-select {
+select {
     margin-left: 10px;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 16px;
-    background-color:var(--color-blue);
     border-radius: 5px;
     padding: 3px;
+    background-color: var(--color-blue);
 }

@@ -19,16 +19,20 @@
   --color-blue:  #083e94;
   --color-red: #fc3b1b;
   --color-white: #FFFFFF;
-  --color-light-blue: #3360a8;
+  --color-grey: #666666;
+  --color-black: #000000c3;
+  background-image: url('./assets/images/planet.jpg');
+  background-size: cover;
 }
 
 * {
   margin: 0; 
   box-sizing: border-box;
-  /* background-color: var(--color-light-blue); */
   color: var(--color-white);
 };
 
-
+a {
+  text-decoration: none;
+}
 
 

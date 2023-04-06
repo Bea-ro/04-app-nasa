@@ -1,0 +1,23 @@
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#apod-image {
+    width: 100%;
+    object-fit: contain;
+    max-height: 100vh;
+}
+
+#apod-video {
+ width: 70%;
+ height: 80%
+}
+
+.loading-error-message {
+margin: 24px 0 300px 0;
+color: var(--color-red)
+}
+   
+  
