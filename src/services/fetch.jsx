@@ -32,7 +32,6 @@ useEffect(() => {
       return res.data;
       
     } else {
-      //si date es hoy pasala a yesterday y si no se queda date 
       date === today? setDate(twoDaysBefore) : setDate(date)
       const res = await axios.get(`${NASA_URL}mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${NASA_API_KEY}`)
       return res.data?.photos[0];

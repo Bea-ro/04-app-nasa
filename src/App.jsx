@@ -13,10 +13,8 @@ const { date, setDate, api, setApi, apod, error, loaded  } = fetch();
   return (
     <>
     <Header />
-    
     <Routes>
-  {/* <Route path='/' element={<App/>}> */}  
-    <Route index element={<Home date={date} setDate={setDate} setApi={setApi}/>}/>
+    <Route index element={<Home date={date} setDate={setDate} api={api} setApi={setApi}/>}/>
     <Route path='/photo' element={<Photo api={api} apod={apod} error={error} loaded={loaded}/>} />
     </Routes>
 
