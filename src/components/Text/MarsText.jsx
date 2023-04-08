@@ -13,9 +13,9 @@ const MarsText = ( {apod, date, loaded, error} ) => {
       <h2 className="image-title">Marte</h2>
 
     <figure className="image-date-copyright">
-    <img src="../../public/icons/calendar.png" alt="Fecha" className="icon" id="calendar"/>
+    <img src="../../icons/calendar.png" alt="Fecha" className="icon" id="calendar"/>
     <span className="image-date">{getFormatDate(date)}</span>
-    <img src="../../public/icons/camera.png" alt="Autoría" className="icon" id="camera"/>
+    <img src="../../icons/camera.png" alt="Autoría" className="icon" id="camera"/>
     <span className="copyright">No disponible</span>
     </figure>
     </div>
