@@ -5,26 +5,23 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Photo from './pages/Photo/Photo';
 
-
 function App() {
-
-const { date, setDate, api, setApi, apod, error, loaded  } = fetch();
+  const { date, setDate, api, setApi, apod, error, loaded } = fetch();
 
   return (
     <>
-    <Header />
-    <Routes>
-    <Route index element={<Home date={date} setDate={setDate} api={api} setApi={setApi}/>}/>
-    <Route path='/photo' element={<Photo date={date} api={api} apod={apod} error={error} loaded={loaded}/>} />
-    </Routes>
+      <Header />
+      <Routes>
+        <Route index element={<Home date={date} setDate={setDate} api={api} setApi={setApi} />} />
+        <Route
+          path="/photo"
+          element={<Photo date={date} api={api} apod={apod} error={error} loaded={loaded} />}
+        />
+      </Routes>
 
-    <Footer />
+      <Footer />
     </>
-    )
-
+  );
 }
 
-      
 export default App;
-
-
