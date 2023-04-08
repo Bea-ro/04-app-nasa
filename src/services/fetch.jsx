@@ -1,14 +1,8 @@
-// import dotenv from 'dotenv'
-// dotenv.config()
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 
-const NASA_URL = 'https://api.nasa.gov/';
-const NASA_API_KEY = 'yjawi9EPzPsmknl45Ng3yoWI8wpLpPNzKSa03kyG'
-
 export const today = new Date(Date.now()).toISOString().slice(0, 10);
-const twoDaysBefore = new Date (new Date().getTime()-48*60*60*1000).toISOString().slice(0, 10);
 
 export const fetch = () => {
 
@@ -28,12 +22,12 @@ useEffect(() => {
     
   try {
       if (api==='apod') { 
-      const res = await axios.get(`${NASA_URL}planetary/apod?date=${date}&api_key=${NASA_API_KEY}`) 
+      const res = await axios.get(`${import.meta.env.VITE_NASA_URL}planetary/apod?date=${date}&api_key=${import.meta.env.VITE_NASA_API_KEY}`) 
       return res.data;
       
     } else {
-      date === today? setDate(twoDaysBefore) : setDate(date)
-      const res = await axios.get(`${NASA_URL}mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${NASA_API_KEY}`)
+      // date === today? setDate(twoDaysBefore) : setDate(date)
+      const res = await axios.get(`${import.meta.env.VITE_NASA_URL}mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${import.meta.env.VITE_NASA_API_KEY}`)
       return res.data?.photos[0];
       
       }
@@ -42,7 +36,9 @@ useEffect(() => {
   };
   }
   
-  getApod().then((data) => {setApod(data); setLoaded(true); console.log(data)})
+  getApod().then((data) => {
+    setApod(data); 
+    setLoaded(true);})
   
 }, [date, api]);
 

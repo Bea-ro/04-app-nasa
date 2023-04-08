@@ -19,5 +19,12 @@
 margin: 24px 0 300px 0;
 color: var(--color-red)
 }
-   
-  
+
+@media screen and (max-width: 414px) {
+.image {
+   padding: 12px 0;
+}
+#apod-video {
+    width: 100%;
+   }
+}

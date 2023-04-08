@@ -37,3 +37,24 @@ border: none;
 a {
     text-decoration: none;
 }
+
+@media screen and (max-width: 414px) {
+    .main-home {
+     padding: 0 16px;
+    }
+    
+    .page-title {
+        margin-top: 24px;
+    font-size: 26px
+}
+.intro {
+    line-height: 1.8rem;
+    font-size: 16px;
+    }
+    .options {
+     flex-direction: column;
+     align-items: center;
+     gap: 14px;
+        }
+  }
+  

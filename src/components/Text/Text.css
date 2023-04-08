@@ -24,7 +24,10 @@ padding: 12px;
 
 .icon {
     height:20px;
-    margin-left: 24px;
+}
+
+#camera {
+margin-left: 24px;    
 }
 
 .image-description {
@@ -54,3 +57,15 @@ padding: 12px;
     width: fit-content;
     align-self: center;
     }
+
+    @media screen and (max-width: 414px) {
+    .image-info {
+        padding: 12px 0;
+    }
+    .image-title{
+        font-size:1.3em
+    }
+    .back-button {
+    margin-top: 12px;
+}
+}

@@ -3,3 +3,12 @@
     grid-template-columns: 1fr 2fr;
     padding: 24px;
 }
+
+@media screen and (max-width: 414px) {
+    .main-photo {
+display: flex;
+flex-direction: column-reverse;
+padding: 0 20px;
+align-items: center;
+    }
+}
