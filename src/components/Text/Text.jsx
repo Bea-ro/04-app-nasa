@@ -19,7 +19,6 @@ const Text = ( {apod, error, loaded} ) => {
     <>
     <div className="image-details">
     <h2 className="image-title">{apod.title}</h2>
-  
     <figure className="image-date-copyright">
     <img src="../../icons/calendar.png" alt="Fecha" className="icon" id="calendar"/>
     <span className="image-date">{getFormatDate(apod.date)}</span>

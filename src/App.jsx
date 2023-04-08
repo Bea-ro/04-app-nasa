@@ -18,7 +18,6 @@ function App() {
           element={<Photo date={date} api={api} apod={apod} error={error} loaded={loaded} />}
         />
       </Routes>
-
       <Footer />
     </>
   );

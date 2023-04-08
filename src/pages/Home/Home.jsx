@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 const Home = ({ date, setDate, api, setApi }) => {
   return (
     <main className="main-home">
-      {/* style={{backgroundImage: `url(${apod.url})`}} */}
       <h1 className="page-title">
         ¿Quieres ver la imagen astronómica <br /> del día?
       </h1>

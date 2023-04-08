@@ -27,9 +27,9 @@ const MarsText = ( {apod, date, loaded, error} ) => {
       <h2 className="image-title">Marte</h2>
 
     <figure className="image-date-copyright">
-    <img src="../../public/icons/calendar.png" alt="Fecha" className="icon"/>
+    <img src="../../icons/calendar.png" alt="Fecha" className="icon"/>
     <span className="image-date">{getFormatDate(apod?.earth_date)}</span>
-    <img src="../../public/icons/camera.png" alt="Autoría" className="icon"/>
+    <img src="../../icons/camera.png" alt="Autoría" className="icon"/>
     <span className="copyright">Cámara: {apod?.camera.name}</span>
     </figure>
     </div>
