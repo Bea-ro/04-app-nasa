@@ -1,14 +1,17 @@
 .main-photo {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding: 24px;
+  margin: 24px;
+  padding: 24px 24px 24px 24px;
+  background-color: var(--color-black);
+  border-radius: 5px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 845px) {
   .main-photo {
     display: flex;
     flex-direction: column-reverse;
-    padding: 0 20px;
+    padding: 20px;
     align-items: center;
   }
 }
