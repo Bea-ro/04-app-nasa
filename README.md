@@ -7,7 +7,7 @@
 - Navegación con **React Router**.
 - **Contenido multimedia** de la API de la NASA, incluido vídeo.
 - **Fetchs** a distintos endpoints.
-- Date and select **inputs**.
+- **Inputs** date y select.
 - Diseño responsive mediante **media queries**.
 - Configuración y uso de **Eslint** y **Prettier**.
 - Despliegue con **Netlify**.
