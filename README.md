@@ -1,1 +1,17 @@
-Como la NASA ofrece vídeos además de imágenes, para ver cómo se renderiza el vídeo, se puede seleccionar fecha 11/09/2022.
+> Proyecto desplegado 👉 https://imagen-astronomica-del-dia.netlify.app/
+
+## Skills
+
+### React, JavaScript y CSS
+
+- Navegación con **React Router**.
+- **Contenido multimedia** de la API de la NASA, incluido vídeo.
+- **Fetchs** a distintos endpoints.
+- Date and select **inputs**.
+- Diseño responsive mediante **media queries**.
+- Configuración y uso de **Eslint** y **Prettier**.
+- Despliegue con **Netlify**.
+
+### Renderizado de video:
+
+Para ver vídeo, seleccionar fecha 11/09/2022.
